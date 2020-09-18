@@ -1,0 +1,418 @@
+@font-face {
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../font/Montserrat-Regular.ttf");
+  font-family: mont;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: mont, Helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+html {
+  overflow-x: hidden;
+}
+*::selection {
+  background-color: #333;
+  color: #1abc9c;
+}
+/* Style the header */
+
+.header {
+  padding: 10px 110px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+
+  perspective: 1000px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo img:hover {
+  animation: pulse 3s ease-in infinite;
+}
+p::first-letter {
+  font-size: 30px;
+  font-style: italic;
+  color: #1abc9c;
+}
+.at {
+  font-size: 30px;
+  font-style: italic;
+  color: #1abc9c;
+}
+.arr {
+  color: #333;
+  padding: 0 1px;
+}
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+.p-head {
+  font-size: 20px;
+  font-weight: bold;
+}
+p {
+  line-height: 1.5;
+}
+h2 {
+  font-size: 27px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.marker {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+.marker::before {
+  content: "Kliknite za korisne linkove";
+  width: 200px;
+  top: 15px;
+  right: 40px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.marker:hover::before {
+  opacity: 1;
+}
+.marker img {
+  width: 100%;
+  height: 100%;
+}
+.links {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  background: #1abc9c;
+  color: White;
+  list-style: none;
+  top: -15px;
+  left: 70px;
+  z-index: 33;
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.toggler {
+  transform: translatex(-500px);
+}
+.links li {
+  margin: 10px 50px 10px 0;
+}
+.links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    #333 83%,
+    #1abc9c 83%,
+    #1abc9c 85%,
+    #333 85%,
+    #333 87%,
+    #1abc9c 87%,
+    #1abc9c 89%,
+    #333 89%,
+    #333 91%,
+    #1abc9c 91%,
+    #1abc9c 93%,
+    #333 93%,
+    #333 95%,
+    #333 100%
+  );
+  padding: 0 80px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* contact form */
+.contact-form {
+  background-color: #1abc9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.contact-form a {
+  text-decoration: none;
+  color: #cccccc;
+  background-color: #333333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.4s ease-in;
+}
+.contact-form a:hover {
+  color: #333333;
+  background-color: #cccccc;
+}
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  display: block;
+  width: 100%;
+}
+.column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: rgb(218, 233, 222);
+  padding: 30px;
+}
+/* video section */
+
+.video {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  background: #1abc9c;
+  flex-wrap: wrap;
+}
+.video-container {
+  width: 320px;
+  height: 250px;
+  flex: 1 0 25%;
+  padding: 10px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.toTop {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -40px;
+  transition: 0.3s ease-in;
+}
+.toTop:hover {
+  animation: pulse ease-in-out 1s infinite;
+}
+.toTop img {
+  width: 100%;
+  height: 100%;
+}
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+#expandedImg {
+  height: 400px;
+  padding: 0 10px;
+}
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.closebtn:hover {
+  animation: pulse 1s ease-in-out infinite;
+}
+.map {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+.city-loc {
+  text-align: center;
+  color: white;
+  background-color: #1abc9c;
+  margin: 0;
+  padding: 20px 0;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 1510px) {
+  .marker::before {
+    display: none;
+  }
+  .video-container {
+    width: 290px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .marker {
+    display: none;
+  }
+  .video-container {
+    width: 290px;
+    height: 220px;
+    flex: 1 0 50%;
+    padding: 10px;
+  }
+  .logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    width: 50%;
+  }
+
+  .video-container {
+    width: 290px;
+    height: 220px;
+    flex: 1 0 90%;
+    padding: 10px;
+  }
+  .toTop {
+    display: none;
+  }
+  .video {
+    padding: 40px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-heading {
+    font-size: 50%;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .btn-submit {
+    padding-left: 0px;
+  }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    trannsfrom: scale(1);
+  }
+}
